@@ -20,7 +20,7 @@ async def shell(_, message):
     stdout, stderr, _ = await cmd_exec(cmd, shell=True)
     reply = ''
     if len(stdout) != 0:
-        reply += f"<b>{stderr}</b>"
+        reply += f"<b>{stdout}</b>"
         LOGGER.info(f"Shell - {cmd} - {stdout}")
     if len(stderr) != 0:
         reply += f"<b>{stderr}</b>"
